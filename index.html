@@ -15,13 +15,13 @@
 <style>
 body{
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
     background:#f7f7f7;
 }
 
 /* HEADER */
 header{
-    background: linear-gradient(90deg,#d4af37,#ffd700);
+    background:linear-gradient(90deg,#d4af37,#ffd700);
     padding:20px;
     text-align:center;
 }
@@ -35,27 +35,6 @@ header p{
     font-size:18px;
 }
 
-/* SLIDER */
-.slider{
-    width:100%;
-    overflow:hidden;
-}
-.slides{
-    display:flex;
-    animation: slide 12s infinite;
-}
-.slides img{
-    width:100%;
-    max-height:350px;
-    object-fit:cover;
-}
-@keyframes slide{
-    0%{transform:translateX(0);}
-    33%{transform:translateX(-100%);}
-    66%{transform:translateX(-200%);}
-    100%{transform:translateX(0);}
-}
-
 /* CONTAINER */
 .container{
     width:90%;
@@ -64,13 +43,13 @@ header p{
     padding:20px;
 }
 
-/* BOXES */
+/* BOX */
 .box{
     background:#ffe6ee;
     padding:20px;
-    border-radius:12px;
+    border-radius:14px;
     margin-bottom:20px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    box-shadow:0 6px 15px rgba(0,0,0,0.12);
 }
 
 /* FLEX */
@@ -79,10 +58,36 @@ header p{
     flex-wrap:wrap;
     gap:20px;
 }
-.flex img{
-    width:100%;
-    border-radius:10px;
+
+/* ICON BOX */
+.icon-box{
+    flex:1;
+    min-width:200px;
+    height:180px;
+    background:#fff;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
 }
+.icon-box:hover{
+    transform:scale(1.05);
+}
+.icon-box span{
+    font-size:18px;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* COLORS */
+.home{color:#2e7d32;}
+.shop{color:#1565c0;}
+.office{color:#6a1b9a;}
+.shiv{color:#e65100;}
 
 /* BUTTON */
 .call-btn{
@@ -94,7 +99,7 @@ header p{
     font-size:20px;
     text-decoration:none;
     border-radius:10px;
-    margin-top:10px;
+    margin-top:15px;
 }
 .call-btn:hover{
     background:#8e0000;
@@ -118,31 +123,39 @@ footer{
     <p>Buy • Sell • Rent Property in Ghaziabad</p>
 </header>
 
-<!-- SLIDER -->
-<div class="slider">
-    <div class="slides">
-        <img src="https://via.placeholder.com/1200x350?text=Flat+For+Sale+Ghaziabad">
-        <img src="https://via.placeholder.com/1200x350?text=Property+For+Rent">
-        <img src="https://via.placeholder.com/1200x350?text=Commercial+Property">
-    </div>
-</div>
-
 <div class="container">
 
 <div class="box">
 <p>
-सबसे सस्ते और आपके बजट में <strong>फ्लोर, फ्लैट, कोठी, दुकान, शॉप, प्लॉट, कमर्शियल प्रॉपर्टी, गोदाम, ऑफिस</strong>  
+सबसे सस्ते और आपके बजट में  
+<strong>फ्लोर, फ्लैट, कोठी, दुकान, शॉप, प्लॉट, कमर्शियल प्रॉपर्टी, गोदाम, ऑफिस</strong>  
 अब आपके शहर <strong>गाजियाबाद</strong> में उपलब्ध।
 </p>
 </div>
 
+<!-- ICON SECTION -->
 <div class="box flex">
-    <div style="flex:1">
-        <img src="https://via.placeholder.com/400x250?text=Small+Flat" alt="Flat">
+
+    <div class="icon-box home">
+        🏠
+        <span>Flat / Floor</span>
     </div>
-    <div style="flex:1">
-        <img src="https://via.placeholder.com/300x250?text=Shiv+Ji" alt="Shiv Ji">
+
+    <div class="icon-box shop">
+        🏬
+        <span>Shop / Plot</span>
     </div>
+
+    <div class="icon-box office">
+        🏢
+        <span>Commercial</span>
+    </div>
+
+    <div class="icon-box shiv">
+        🕉️
+        <span>शिव कृपा</span>
+    </div>
+
 </div>
 
 <div class="box">
@@ -159,8 +172,8 @@ footer{
 <div class="box">
 <h2>🏠 Rent | Buy | Sell</h2>
 <p>
-✔ फ्लोर और फ्लैट Rent पर उपलब्ध  
-✔ खरीदने और बेचने की पूरी सुविधा  
+✔ फ्लोर और फ्लैट Rent पर उपलब्ध<br>
+✔ खरीदने और बेचने की पूरी सुविधा<br>
 ✔ Residential & Commercial Deals
 </p>
 
@@ -180,7 +193,7 @@ footer{
 
 <footer>
 <p>© 2026 Hari Om Namah Property, Ghaziabad</p>
-<p>Call: 9810765977</p>
+<p>📞 9810765977</p>
 </footer>
 
 </body>
